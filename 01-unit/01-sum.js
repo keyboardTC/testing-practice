@@ -1,7 +1,7 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function sum(num1, num2) {
+function sum(num1 = 0, num2 = 0) {
   return (num1 + num2)
 }
 
@@ -20,14 +20,15 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should ignore additional numbers.
-  var result = sum(1, 1, 1, 1, 1,);
+  var result = sum(1, 1, 1, 1, 1);
   if (result !== 2) throw new Error('Expected sum(1, 1, 1, 1, 1,) to be 2. Received: ' + result);
-
 
   // --------------------------------------------------
   // Test Case 3
   // --------------------------------------------------
   // When invoked with only 1 number, it should return that number.
+  var result = sum(2);
+  if (result !== 2) throw new Error('Expected sum(2) to be 2. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 4
