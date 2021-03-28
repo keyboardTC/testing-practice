@@ -18,8 +18,10 @@ function calc(command, num1, num2) {
       break;
       case "divide": return quotient.quotient(num1, num2);
       break;
-    
-      default:
+      case "exponent": return `Operation not supported.`;
+      break;
+
+      default: return `Operation not specified.`
         break;
     }
 }
@@ -60,6 +62,8 @@ try {
   // Test Case 5
   // --------------------------------------------------
   // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
+  var result = calc('exponent', 2, 8);
+  if (result !== `Operation not supported.`) throw new Error('Expected calc("exponent", 2, 8) to be 81. Received: ' + result);  
 
   console.log('\nAll Calculation tests passed successfully.');
 
