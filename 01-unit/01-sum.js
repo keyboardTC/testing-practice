@@ -1,7 +1,7 @@
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function sum(num1 = 0, num2 = 0) {
+ function sum(num1 = 0, num2 = 0) {
   return (num1 + num2)
 }
 
@@ -37,7 +37,7 @@ try {
   var result = sum();
   if (result !== 0) throw new Error('Expected sum() to be 0. Received: ' + result);
 
-  console.log('All tests passed successfully.');
+  console.log('All Sum tests passed successfully.');
 
 // ==================================================
 // PRINT ERRORS
@@ -46,3 +46,5 @@ try {
   console.warn('Whoops, the following test did not pass:');
   console.error(e.message);
 }
+
+module.exports = {sum};

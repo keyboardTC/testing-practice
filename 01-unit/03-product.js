@@ -44,7 +44,7 @@ try {
   var result = product();
   if (result !== 0) throw new Error('Expected product() to be 0. Received: ' + result);
 
-  console.log('All tests passed successfully.');
+  console.log('All product tests passed successfully.');
 
 // ==================================================
 // PRINT ERRORS
@@ -53,3 +53,6 @@ try {
   console.warn('Whoops, the following test did not pass:');
   console.error(e.message);
 }
+
+module.exports = {product}
+

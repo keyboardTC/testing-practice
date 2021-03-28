@@ -64,3 +64,4 @@ try {
   console.warn('Whoops, the following test did not pass:');
   console.error(e.message);
 }
+module.exports = {quotient}

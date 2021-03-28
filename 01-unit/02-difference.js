@@ -37,7 +37,7 @@ try {
   var result = difference();
   if (result !== 0) throw new Error('Expected difference() to be 0. Received: ' + result);
 
-  console.log('All tests passed successfully.');
+  console.log('All difference tests passed successfully.');
 
 // ==================================================
 // PRINT ERRORS
@@ -46,3 +46,5 @@ try {
   console.warn('Whoops, the following test did not pass:');
   console.error(e.message);
 }
+
+module.exports = {difference};
