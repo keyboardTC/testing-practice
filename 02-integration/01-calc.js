@@ -1,8 +1,24 @@
+let sum = require('../01-unit/01-sum.js');
+let difference = require('../01-unit/02-difference.js');
+let product = require('../01-unit/03-product.js');
+
+
+
 // ==================================================
 // DEFINE FUNCTION(S)
 // ==================================================
-function calc() {
-
+function calc(command, num1, num2) {
+    switch (command) {
+      case "add": return sum.sum(num1, num2);
+      break;
+      case "subtract": return difference.difference(num1, num2);
+      break;
+      case "product": return product.product(num1, num2);
+      break;
+    
+      default:
+        break;
+    }
 }
 
 // ==================================================
@@ -20,6 +36,8 @@ try {
   // Test Case 2
   // --------------------------------------------------
   // It should return the correct difference when the user provides: 'subtract', 20, 10.
+  var result = calc('subtract', 20, 10);
+  if (result !== 10) throw new Error('Expected calc("add", 1, 1) to be 0. Received: ' + result);
 
   // --------------------------------------------------
   // Test Case 3
@@ -36,7 +54,7 @@ try {
   // --------------------------------------------------
   // It should return the message 'Operation not supported.' when the user provides: exponent, 2, 8.
 
-  console.log('All tests passed successfully.');
+  console.log('All Calculation tests passed successfully.');
 
 // ==================================================
 // PRINT ERRORS
