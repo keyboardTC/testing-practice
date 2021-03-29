@@ -1,7 +1,7 @@
-let sum = require('../01-unit/01-sum.js');
-let difference = require('../01-unit/02-difference.js');
-let product = require('../01-unit/03-product.js');
-let quotient = require('../01-unit/04-quotient.js');
+const sum = require('../01-unit/01-sum.js');
+const difference = require('../01-unit/02-difference.js');
+const product = require('../01-unit/03-product.js');
+const quotient = require('../01-unit/04-quotient.js');
 
 
 
